@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Kaushan+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+
+/* start variable  */
+:root {
+  --color1: #4a453c;
+  --input-transparent: #bbb6b6;
+  --placeholder-transparent: #434141;
+  ----input-color-2: #5b574d;
+}
+
+/* End variable  */
+
+/* start Global Rule  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  background-color: #181818;
+  font-family: "Almarai", sans-serif;
+  direction: rtl;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*:focus {
+  outline: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+#particles-js {
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: 99%;
+  overflow: hidden;
+}
+
+/* end Global Rule  */
+
+/* start header  */
+header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px 0 50px;
+  padding: 30px 0;
+  border-top: 3px solid var(--color1);
+  border-bottom: 3px solid var(--color1);
+  color: white;
+  font-size: 30px;
+  letter-spacing: 2px;
+  gap: 10px;
+}
+
+/* end header  */
+
+/* start forms  */
+form input {
+  padding: 12px 10px 12px 0;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #f6f6f6f6;
+  caret-color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+form input::placeholder {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+
+form .all {
+  width: 100%;
+  background-color: var(--input-transparent);
+}
+
+form .all::placeholder {
+  color: var(--placeholder-transparent);
+}
+
+form .price input {
+  margin-left: 5px;
+  background-color: var(----input-color-2);
+  color: white;
+  width: 20%;
+}
+
+form .price small {
+  background-color: #a00d02;
+  padding: 9px 6px;
+  border-radius: 4px;
+  color: white;
+}
+
+form .price small::before {
+  content: "المجموع = ";
+}
+
+form .price input::placeholder,
+input[type="submit"] {
+  color: #e1dfdc;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+
+input[type="submit"] {
+  text-align: center;
+  background-color: black;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0 4px 10px #379561;
+}
+
+form .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+form .search input {
+  width: 40%;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  transform: scale(1.1);
+}
+
+.responsive_table {
+  overflow-x: auto;
+}
+
+table {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  min-width: 1000px;
+  width: 100%;
+  border-spacing: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+table tr td {
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+table thead tr td {
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  background: black;
+}
+
+table tbody tr td{
+  border-left: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  transition: 0.3s;
+}
+
+table tbody tr:hover td{
+  background-color: #424243;
+}
+
+table tbody button {
+  background: #0b00ff;
+  color: white;
+  padding: 7px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+table tbody button:hover {
+  transform: translateY(-3px);
+}
+
+table tbody #delete {
+  background-color: red;
+}
+
+@media (max-width: 992px) {
+  form input {
+    width: 100%;
+  }
+
+  form input::placeholder,
+  form .s_category,
+  form .s_product {
+    font-size: 13px;
+  }
+
+  form .price input {
+    width: 100%;
+  }
+
+  form .price input::placeholder {
+    font-size: 13px;
+  }
+
+  form .price small {
+    display: block;
+    width: fit-content;
+    margin-bottom: 25px;
+  }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    transform: none;
+  }
+
+  form .search input{
+    width: 50%;
+  }
+}
+
+/* end forms  */

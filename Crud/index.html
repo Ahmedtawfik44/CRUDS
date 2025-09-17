@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cruds</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- start header  -->
+    <header>
+      <div id="particles-js"></div>
+      <h1>نظام اداره المنتجات<i class="fa-solid fa-cart-shopping"></i></h1>
+    </header>
+
+    <div class="container">
+      <form action="">
+        <input  class="all" type="text" id="product" placeholder=" اسم المنتج " />
+        <div class="price">
+          <input  onkeyup="get_total()"  id="price"  type="number"  placeholder="السعر"/>
+          <input  onkeyup="get_total()"  id="taxes"  type="number"  placeholder="الضرائب" />
+          <input  onkeyup="get_total()"  id="ads"  type="number"  placeholder="الاعلانات"  />
+          <input  onkeyup="get_total()"  id="discount"  type="number"   placeholder="الخصم"    />
+          <small  id="total">0</small>
+        </div>
+        <input  id="category" class="all" type="text" placeholder="الفئه" />
+        <input  id="count" class="all" type="number" placeholder=" العدد" />
+        <input id="submit" class="all creat" type="submit" value="انشاء" />
+        <input class="all" type="text" placeholder="بتبحث عن ايه"  id="search" onkeyup="searchData(this.value)"/>
+        <div class="search">
+          <input class="s_product" type="submit" value="ابحث عن طريق المنتج " formaction="javascript:void(0)" id="product"  onclick="Search(this.id)"  />
+          <input class="s_category" type="submit" value="ابحث عن طريق الفئه " formaction="javascript:void(0)" id="category"  onclick="Search(this.id)"  />
+        </div>
+        <div id="delete_all"></div>
+        <div class="responsive_table">
+          <table>
+            <thead>
+              <tr>
+                <td>ID</td>
+                <td>اسم المنتج</td>
+                <td>السعر</td>
+                <td>الضرائب</td>
+                <td>الاعلانات</td>
+                <td>الخصم</td>
+                <td>المجموع</td>
+                <td>الفئه</td>
+                <td>الاجمالي</td>
+                <td>تحديث</td>
+                <td>حذف</td>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+      </form>
+    </div>
+
+    <script src="./js/particles.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
