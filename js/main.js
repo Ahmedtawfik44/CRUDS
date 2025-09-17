@@ -43,14 +43,14 @@ submit.addEventListener("click", (e) => {
 
   e.preventDefault();
   let data_obj = {
-    title: product_name.value.toLowerCase(),
+    title: product_name.value,
     price: price.value,
     taxes: taxes.value,
     ads: ads.value,
     discount: discount.value,
     total: total.innerHTML,
     count: count.value,
-    category: category.value.toLowerCase(),
+    category: category.value,
   };
 
   if (product_name.value.trim() != "" && price.value.trim() != "" && category.value.trim() != "" && count.value < 100) {
@@ -166,7 +166,7 @@ function update_item(i) {
 
 // Search
 
-let search_mod = 'product'
+let search_mod = 'product';
 function Search(id) {
   if (id === 'category') {
     search_mod = 'category';
@@ -187,27 +187,14 @@ function searchData(v) {
   data.forEach((e, i) => document.querySelector(`#row${i}`).style.display = 'none');
   for (let i = 0; i < data.length; i++) {
     if (search_mod === 'product') {
-      if (data[i].title.includes(v.toLowerCase())) {
-        data.forEach((e, id) => {
-          if (i == id) {
+      if (data[i].title.toLowerCase().includes(v.toLowerCase())) {
             document.querySelector(`#row${i}`).style.display = 'table-row';
-          }
-        });
       }
     }
    else {
-    if (data[i].category.includes(v.toLowerCase())) {
-      data.forEach((e, id) => {
-        if (i == id) {
+    if (data[i].category.toLowerCase().includes(v.toLowerCase())) {
           document.querySelector(`#row${i}`).style.display = 'table-row';
-        }
-      });
     }
   }
 }
 }
-
-
-
-
-
