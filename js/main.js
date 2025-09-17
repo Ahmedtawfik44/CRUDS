@@ -74,7 +74,8 @@ submit.addEventListener("click", (e) => {
     Swal.fire({
       icon: "error",
       title: "الشروط",
-      text: "   يجب عليك ملئ حقل المنتج والسعر والفئه ويجب ان يكون العدد اقل من 100 والارقام يجب ان تكون مكتوبه بالانجليزي ",
+      text: "   يجب عليك ملئ حقل المنتج والسعر والفئه ويجب ان يكون العدد اقل من 100 والارقام يجب ان تكون مكتوبه بالانجليزي",
+    });
   }
 
   localStorage.setItem("product", JSON.stringify(data));
@@ -197,3 +198,8 @@ function searchData(v) {
   }
 }
 }
+
+
+
+
+
